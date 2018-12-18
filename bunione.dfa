@@ -1,0 +1,39 @@
+states = {q1,q2,q3,q4,q5,q6,q7,q8,q9,q11}
+
+input_alphabet = {x,y,z}
+
+start_state = q1
+
+accept_states = {q1,q2,q3,q4,q7,q8,q11}
+
+delta =
+        q1,x -> q2;
+        q1,z -> q7;
+        q1,y -> q6;
+        q2,x -> q2;
+        q2,y -> q11;
+        q2,z -> q3;
+        q3,x -> q4;
+        q3,y -> q11;
+        q3,z -> q11;
+        q4,x -> q2;
+        q4,y -> q5;
+        q4,z -> q3;
+        q5,x -> q5;
+        q5,y -> q5;
+        q5,z -> q5;
+	q6,x -> q8;
+	q6,y -> q8;
+	q6,z -> q8;
+	q7,x -> q9;
+	q7,y -> q9;
+	q7,z -> q9;
+	q8,x -> q6;
+	q8,y -> q6;
+	q8,z -> q6;
+	q9,x -> q7;
+	q9,y -> q7;
+	q9,z -> q7;
+	q11,x -> q2;
+	q11,y -> q11;
+	q11,z -> q11;

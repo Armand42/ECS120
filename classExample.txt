@@ -1,0 +1,18 @@
+; compute sum of squares of ints 1 to n
+	.equ 	@,$100	; starts at address 100 then continues to 101,102	
+	lda 	counter	; class example while loop refer to c++ code
+loop:	cma	n	; test if counter > n
+	jgt 	end
+	mul	counter
+	ada	sum
+	sta	sum
+	lda 	counter
+	ada#	$001
+	sta   counter
+	jmp	loop
+end:	hlt
+	.equ	@,$200		; place counter at address 200
+counter:	.word	$001		; this goes into 201
+sum:	.word $000		; this goes into 202
+n:	.word	$005		; this goes into 203
+

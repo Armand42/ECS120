@@ -1,0 +1,14 @@
+states = {s,q}
+
+input_alphabet = {0,1}
+
+start_state = s
+
+accept_states = {s}
+
+delta = 
+	s,0 -> q;
+	s,1 -> s;
+	q,0 -> s;
+	q,1 -> q;
+
